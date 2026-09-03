@@ -1,0 +1,1202 @@
+[
+    {
+        "type": "text",
+        "text": "Senus PLC",
+        "text_level": 1,
+        "bbox": [
+            447,
+            169,
+            549,
+            186
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Half Year Results for the 6 months ended 31 December 2025",
+        "text_level": 1,
+        "bbox": [
+            238,
+            202,
+            759,
+            219
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Dublin, Ireland, 19 March 2026, Senus PLC (\"Senus\" or the \"Company\"), the Irish headquartered provider of climate risk and soil health intelligence technology solutions, today announces its unaudited Half Year Results for the six months ended 31 December 2025 (HY2026).",
+        "bbox": [
+            111,
+            233,
+            885,
+            284
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Highlights",
+        "text_level": 2,
+        "bbox": [
+            112,
+            296,
+            207,
+            315
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "● Group Revenue up 4.1% to €354.8k (HY25: €340.9k).",
+        "bbox": [
+            142,
+            329,
+            604,
+            347
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Gross Profit up 6.5% to €289.9k (HY25: €272.0k) with a Gross margin of 81.7% (HY25: 79.8%).",
+        "bbox": [
+            142,
+            353,
+            883,
+            386
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Group operating loss and loss after tax of €483.8k (HY25: €405.6k) and €485.1k (HY25: €406.6k) respectively.",
+        "bbox": [
+            142,
+            392,
+            883,
+            426
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "● Cash and bank debt balances were €735.1k and €76.5k respectively at the end of the period.",
+        "bbox": [
+            142,
+            431,
+            883,
+            465
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "● Integration of Loamin Ltd. progressing on plan, strengthening the group’s solutions, customer engagement and UK presence.",
+        "bbox": [
+            142,
+            470,
+            883,
+            505
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "● €1.1m in new equity funding completed.",
+        "bbox": [
+            142,
+            511,
+            495,
+            529
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "● Direct Listing on Euronext Access Dublin completed.",
+        "bbox": [
+            142,
+            535,
+            594,
+            553
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "● Continued momentum with agri corporates and financial institutions with pipeline deals of approx. €700k across 21 enterprise customers closed in the period (further approx. €500k of open pipeline).",
+        "bbox": [
+            142,
+            558,
+            885,
+            608
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Commercial highlights include closing a substantial whole supply chain project contract with First Milk in the UK, progression of contract discussions for phase 2 with Bank of Ireland and being chosen as a technology partner for a major Department of Agriculture Food and the Marine research grant led by the University of Limerick in Biochar.",
+        "bbox": [
+            142,
+            613,
+            885,
+            680
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Brendan Allen, Managing Director of Senus, commented:",
+        "text_level": 2,
+        "bbox": [
+            112,
+            717,
+            573,
+            734
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The Company’s trading in the period has been in line with the Directors’ expectations with modest revenue growth compared to the first half of the 2025 financial year and continued progress in developing our pipeline ofnew enterprise clients with a number ofimportant projects commencing in 2026.",
+        "bbox": [
+            111,
+            748,
+            885,
+            814
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "I am particularly proud of our expanding team. In addition to growing sales and launching new solutions with key clients over the past 6 months, we achieved significant strategic milestones as we seek to establish Senus as a leading global provider of Natural Capital management technology solutions for Governments, State agencies, financial institutions, corporations, farmers and other landowners.",
+        "bbox": [
+            111,
+            829,
+            887,
+            880
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "Senus PLC 19 March 2026",
+        "bbox": [
+            112,
+            90,
+            240,
+            122
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            111,
+            89,
+            883,
+            123
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Our Loamin acquisition has already enhanced our solutions as we are delivering a new standard in land and soil intelligence using geospatial AI. Having raised over €1m from existing and new investors and become a public company through the Direct Listing of Senus on Euronext Access, we couldn’t be more optimistic that the platform we are building will meet the needs of many more agri food, financial and government clients in the months and years ahead.",
+        "bbox": [
+            111,
+            137,
+            885,
+            222
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Management Presentation and Further Information",
+        "text_level": 2,
+        "bbox": [
+            112,
+            265,
+            552,
+            281
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Managing Director Brendan Allen and General Manager Stephen Coen are hosting a live results presentation via Investor Meet Company at 10:00am (Dublin / London time) today. The presentation is open to existing and prospective investors, analysts and intermediaries who may sign up to attend here:",
+        "bbox": [
+            112,
+            281,
+            885,
+            351
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "https://www.investormeetcompany.com/senus-plc/register-investor",
+        "bbox": [
+            112,
+            345,
+            650,
+            363
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "The results presentation together with the live broadcast will be available afterwards on the Senus investor relations web-site: https://www.senus.com/investors",
+        "bbox": [
+            111,
+            376,
+            883,
+            411
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Enquiries:",
+        "text_level": 2,
+        "bbox": [
+            120,
+            440,
+            215,
+            459
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Senus PLC",
+        "text_level": 2,
+        "bbox": [
+            122,
+            488,
+            223,
+            506
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Brendan Allen, Managing Director Dr. Stephen Coen, General Manager",
+        "bbox": [
+            120,
+            521,
+            423,
+            556
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Tel: +353 91 395050 (Ireland)",
+        "bbox": [
+            702,
+            520,
+            875,
+            555
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Email: IR@senus.com",
+        "bbox": [
+            120,
+            568,
+            307,
+            588
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Website: www.senus.com",
+        "bbox": [
+            120,
+            601,
+            334,
+            618
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Listing Statistics:",
+        "text_level": 2,
+        "bbox": [
+            120,
+            664,
+            277,
+            683
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Trading Market and Venue",
+        "bbox": [
+            122,
+            696,
+            341,
+            715
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Issued Share Capital",
+        "bbox": [
+            122,
+            728,
+            295,
+            746
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Euronext Access+ Dublin",
+        "bbox": [
+            666,
+            696,
+            874,
+            714
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "2,561,332",
+        "bbox": [
+            787,
+            728,
+            875,
+            746
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "ISIN",
+        "bbox": [
+            122,
+            761,
+            165,
+            777
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "IE000O0F49R3",
+        "bbox": [
+            743,
+            760,
+            874,
+            777
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Ticker",
+        "bbox": [
+            122,
+            792,
+            178,
+            809
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "SENUS",
+        "bbox": [
+            805,
+            791,
+            874,
+            809
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Admission",
+        "bbox": [
+            120,
+            825,
+            210,
+            842
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "22 December 2025",
+        "bbox": [
+            715,
+            824,
+            875,
+            842
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Sponsor",
+        "bbox": [
+            122,
+            857,
+            196,
+            875
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Assiduous NeoSponsor@assiduous.tech",
+        "bbox": [
+            630,
+            857,
+            875,
+            891
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Senus PLC",
+        "text_level": 2,
+        "bbox": [
+            112,
+            122,
+            215,
+            138
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Half Year Results for the 6 months ended 31 December 2025 (unaudited)",
+        "text_level": 2,
+        "bbox": [
+            111,
+            155,
+            736,
+            172
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Chairman’s Statement",
+        "text_level": 2,
+        "bbox": [
+            112,
+            188,
+            312,
+            204
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "This has been a hugely significant period for the Company. During the six months we concluded three major strategic projects. We completed our first acquisition when we acquired UK based Geospatial AI business Loamin Ltd. We raised €1.1m in new capital from a mix of existing and new investors. We became a public company and completed a Direct Listing of Senus on the Euronext Access market in Dublin.",
+        "bbox": [
+            111,
+            210,
+            885,
+            292
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Despite a delayed start to the soil sampling season due to the particularly wet winter we grew revenue modestly in the period. Seeing discussions for access to our solutions progressing with financial institutions, agri corporate enterprises and others we are excited that there is momentum in our target markets and our solution is ready to be deployed at scale to mee our clients requirements.",
+        "bbox": [
+            111,
+            299,
+            887,
+            380
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Financial Results",
+        "text_level": 2,
+        "bbox": [
+            112,
+            386,
+            267,
+            402
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Group Revenue increased 4.1% to €354.8k (HY25: €340.9k) in the period. Gross Profit was up 6.5% to €289.9k (HY25: €272k) with a Gross margin of 81.7% (HY25: 79.8%). Group operating loss and loss after tax of €483.8k (HY25: €405.6k) and €485.1k (HY25: €406.6k) respectively. Cash and bank debt balances were €735.1k and €76.5k respectively at the end of the period",
+        "bbox": [
+            111,
+            409,
+            885,
+            476
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Commercial Progress",
+        "text_level": 2,
+        "bbox": [
+            112,
+            481,
+            307,
+            498
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Arla and Scottish Habitat projects were executed on and commenced in this period. The seasonal soil sampling period began in November with Tirlan, Lakeland Dairies, North Cork Creameries and direct farmers signing up so Senus Soil sampling services, however, volume has declined slightly compared to previous years. In general soil sampling projects which are weather dependant have been reduced in the period compared to previous years due to prolonged wet weather. Activity has increased as conditions have improved.",
+        "bbox": [
+            111,
+            503,
+            885,
+            603
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Senus has made strong commercial progress across its product lines in recent months. A full supply chain project has been secured with First Milk in the United Kingdom, which will deploy Senus ERA to support analysis across their entire farm network. In addition, two critical nature restoration projects in Ireland have adopted Senus ERA to identify and assess key sites of ecological interest. Further to this Bank of Ireland are to continue their engagement with Senus and have doubled the contract value in 2026 which illustrates the broader opportunity for Senus Natural Capital solutions with financial institutions.",
+        "bbox": [
+            111,
+            607,
+            887,
+            722
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Senus has also been confirmed as the technology partner for a Department of Agriculture, Food and the Marine, Irish State sponsored project focused on Biochar. The contract is multiannual in nature and is valued at €300,000 to Senus. Our R&D channel continues to deliver commercial opportunities with the added benefit of access to a broad universe of partners to augment our solutions and capabilities.",
+        "bbox": [
+            111,
+            727,
+            887,
+            809
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Pipeline & Outlook",
+        "text_level": 2,
+        "bbox": [
+            112,
+            814,
+            281,
+            832
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Overall pipeline momentum remains strong. Senus closed 10 commercial deals in the final two months of 2025, with a combined estimated value of approx. €425k. The pipeline of financial institution clients continues to expand, with a number of advanced conversations currently in progress. The Board views the outlook with confidence for the balance of FY2026.",
+        "bbox": [
+            111,
+            838,
+            885,
+            905
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Loamin Acquisition & Technology Integration",
+        "text_level": 2,
+        "bbox": [
+            112,
+            89,
+            508,
+            108
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "The integration of Loamin Ltd. has progressed well, strengthening the group’s solutions and UK presence, and making an immediate impact on activities with both existing and new customers.",
+        "bbox": [
+            111,
+            113,
+            885,
+            148
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "The acquisition has enabled Senus to deliver significant enhancements to both our technology capabilities and operational productivity. AI processes have been successfully embedded across the business, and core technology development has seen a material uplift in output. The acquisition has also created an opportunity to consolidate our product portfolio into a more streamlined offering, without disrupting our high-value customer relationships.",
+        "bbox": [
+            111,
+            152,
+            885,
+            236
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Loamin’s founders Hugh Sturrock and Jonathan Smith have assumed senior leadership roles within Senus, as Head of Research and Head of Software Engineering respectively, strengthening the Company's ability to execute on its product roadmap, to ensure Senus Natural Capita solutions are attractive to multinational financial institutions and agri corporates who can benefit most by using our technology at scale.",
+        "bbox": [
+            111,
+            241,
+            885,
+            323
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Senus 2030",
+        "text_level": 2,
+        "bbox": [
+            112,
+            327,
+            220,
+            344
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Senus is seeking to establish itself as a leading global provider of Natural Capital management technology solutions for Governments, State agencies, financial institutions, corporations, farmers and other landowners.",
+        "bbox": [
+            111,
+            351,
+            883,
+            401
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Senus 2030 is the Company’s 5-year (2026 – 2030) strategy to grow sales of Senus’ Natural Capital solutions at a compound annual growth rate of no less than 50%.",
+        "bbox": [
+            112,
+            406,
+            883,
+            440
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "In line with the Company’s rationale for listing, Senus is positioning itself to be a leader in the Natural Capital management sector and will raise further capital opportunistically where required to pursue growth initiatives, both organically, and, through acquisition.",
+        "bbox": [
+            111,
+            445,
+            883,
+            497
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "The Company is anticipating becoming EBITDA positive during FY2028.",
+        "bbox": [
+            112,
+            502,
+            692,
+            520
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "By 2030 Senus will service an internationally diverse base of clients, providing them with access to the tools they require to unlock the full potential of, and manage the risks associated with, their nature related assets while meeting their sustainability goals and requirements. By 2030 Senus will be positioned as a category leader in the Natural Capital management solutions market with an opportunity for meaningful international scale.",
+        "bbox": [
+            111,
+            525,
+            885,
+            608
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "We look forward to keeping shareholders appraised of our continued progress through 2026.",
+        "bbox": [
+            111,
+            612,
+            854,
+            631
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Gerard Keenan",
+        "text_level": 2,
+        "bbox": [
+            112,
+            645,
+            248,
+            661
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Chairman",
+        "bbox": [
+            114,
+            661,
+            204,
+            678
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "19 March 2026",
+        "bbox": [
+            114,
+            678,
+            240,
+            694
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Senus PLC",
+        "text_level": 2,
+        "bbox": [
+            112,
+            88,
+            215,
+            107
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Consolidated Profit and Loss Account for the six months ended 31 December 2025",
+        "bbox": [
+            111,
+            121,
+            475,
+            155
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "table",
+        "img_path": "images/5c3359127367e95e6ff58ba652a80831a55d7c124ae64ad8d737aa21a9d30358.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td></td><td>Unaudited</td><td>Unaudited</td></tr><tr><td></td><td>Six months</td><td>Six months</td></tr><tr><td></td><td>to</td><td>to</td></tr><tr><td></td><td>31-Dec-25</td><td>31-Dec-24</td></tr></table>",
+        "bbox": [
+            112,
+            152,
+            921,
+            226
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "table",
+        "img_path": "images/8a97de67e5497c0e053524fc243541a8796068f6d9ddc4e473c26bdf2540d7df.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td></td><td>€</td><td>€</td></tr><tr><td>Turnover</td><td>354,813</td><td>340,931</td></tr><tr><td>Cost of sales</td><td>64,861</td><td>69,600</td></tr><tr><td>Gross Profit</td><td>289,952</td><td>272,331</td></tr><tr><td>Distribution costs</td><td>0</td><td>0</td></tr><tr><td>Administrative expenses</td><td>781,975</td><td>677,908</td></tr><tr><td>Other operating income</td><td>8,269</td><td>0</td></tr><tr><td>Group operating loss</td><td>483,753</td><td>405,577</td></tr><tr><td>Other gains and losses</td><td>0</td><td>0</td></tr><tr><td>Interest payable and similar expenses</td><td>1,391</td><td>1,036</td></tr><tr><td>Loss before taxation</td><td>485,144</td><td>406,613</td></tr><tr><td>Tax expense</td><td>0</td><td>0</td></tr><tr><td>Loss for the period</td><td>485,144</td><td>406,613</td></tr></table>",
+        "bbox": [
+            112,
+            242,
+            926,
+            497
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Senus PLC",
+        "text_level": 2,
+        "bbox": [
+            112,
+            529,
+            215,
+            546
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Consolidated Balance Sheet",
+        "bbox": [
+            112,
+            560,
+            362,
+            577
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "for the six months ended 31 December 2025",
+        "bbox": [
+            112,
+            577,
+            475,
+            594
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "table",
+        "img_path": "images/2c1a47ececf6da254cfc8eb1a01690f31891e937bc44165f54cc629e72c7e756.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td></td><td>Unaudited As at 31-Dec-25</td><td>Unaudited As at</td></tr><tr><td>Notes</td><td>€</td><td>31-Dec-24 €</td></tr><tr><td>Fixed Assets</td><td></td><td></td></tr><tr><td>Goodwill</td><td>669,550</td><td>0</td></tr><tr><td>Development Costs</td><td>239,765</td><td>0</td></tr><tr><td>Tangible Assets</td><td>42,006</td><td>65,363</td></tr><tr><td>Current Assets</td><td>951,321</td><td>65,363</td></tr><tr><td>Debtors</td><td></td><td></td></tr><tr><td>Cash and cash equivalents</td><td>188,149 735,189</td><td>211,150</td></tr><tr><td></td><td>923,339</td><td>72,382</td></tr><tr><td></td><td></td><td>283,533</td></tr><tr><td>Creditors: amounts falling due within one year</td><td>-387,105</td><td>-90,111</td></tr><tr><td>Contingent consideration</td><td>-850,000</td><td></td></tr><tr><td>Net Current Assets</td><td>-313,766</td><td>193,421</td></tr><tr><td>Total Assets Less Current Liabilities</td><td>637,554</td><td>258,784</td></tr><tr><td>Creditors: amounts falling due after more than one year</td><td>-76,474</td><td>-85,468</td></tr><tr><td>Net (liabilities) / Assets</td><td>561,081</td><td>173,316</td></tr><tr><td>Capital and Reserves</td><td></td><td></td></tr><tr><td>Called up share capital presented as equity</td><td>25,000</td><td>144</td></tr><tr><td>Share Premium Retained Earnings</td><td>300,000</td><td>849,963</td></tr><tr><td></td><td>236,081</td><td>-676,790</td></tr><tr><td>Equity attributable to owners of the company</td><td>561,081</td><td>173,316</td></tr></table>",
+        "bbox": [
+            114,
+            614,
+            911,
+            911
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "table",
+        "img_path": "",
+        "table_caption": [],
+        "table_footnote": [],
+        "bbox": [
+            114,
+            85,
+            913,
+            396
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Senus PLC",
+        "text_level": 2,
+        "bbox": [
+            112,
+            426,
+            215,
+            445
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Consolidated cash flow statement for the six months ended 31 December 2025",
+        "bbox": [
+            112,
+            458,
+            475,
+            494
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "table",
+        "img_path": "images/8fcf91482f137b91e6e695dce1baa2c1992ee33ec8e4f2732e4881b3887029e7.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td></td><td>Unaudited Six</td><td>Unaudited Six</td></tr><tr><td rowspan=\"3\"></td><td>months to</td><td>months</td></tr><tr><td>31-Dec-25</td><td>to</td></tr><tr><td></td><td>31-Dec-24</td></tr><tr><td>Cash flows from operating activities</td><td>€</td><td>€</td></tr><tr><td>Loss for the 6 month period Adjustments for:</td><td>-485,144</td><td>-406,613</td></tr><tr><td>Interest payable and similar expenses</td><td>1,391</td><td>1,036</td></tr><tr><td>Administrative expenses Depreciation</td><td></td><td></td></tr><tr><td></td><td>10,014 -473,739</td><td>10,016 -395,561</td></tr><tr><td>Movements in working capital</td><td>64,839</td><td></td></tr><tr><td>Cash used in operations</td><td></td><td>-53,584</td></tr><tr><td></td><td>-408,900</td><td>-449,145</td></tr><tr><td>Interest Paid Net Cash used in operating activities</td><td>-1,391 -410,291</td><td>-1,036</td></tr></table>",
+        "bbox": [
+            112,
+            513,
+            890,
+            882
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "table",
+        "img_path": "images/672753a60904f936f62c0164b1d0b89c55285924327a9a799e5f7c2c76cfce8e.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td>Cashflow from investing activities Payments to acquire (in)tangible assets</td></tr><tr><td>-8,500 Receipts from sales of tangible assets</td><td>0 0</td></tr><tr><td>Net Cash used in investment activities</td><td>0 -8,500</td></tr><tr><td></td><td>0</td></tr><tr><td>Cashflow from financing activities</td><td></td></tr><tr><td>Receipt / (Repayment) of loans</td><td>-124,837 97,924 0</td></tr><tr><td>Issue of new shares Net Cash inflow from financing activities</td><td>1,138,683</td></tr><tr><td>Net (decrease) / increase in cash and cash equivalents</td><td>1,013,846 97,924</td></tr><tr><td>Cash and cash equivalent at beginning of period</td><td>595,055 -352,257</td></tr><tr><td>Cash and cash equivalent at end of period 735,189</td><td>140,135 424,639</td></tr></table>",
+        "bbox": [
+            114,
+            90,
+            892,
+            387
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Senus PLC",
+        "text_level": 2,
+        "bbox": [
+            112,
+            417,
+            215,
+            435
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Notes to the Half Year Report",
+        "text_level": 2,
+        "bbox": [
+            112,
+            450,
+            370,
+            467
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "For the six months ended 31 December 2025",
+        "bbox": [
+            112,
+            467,
+            501,
+            484
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "1. Basis of Preparation",
+        "text_level": 2,
+        "bbox": [
+            114,
+            498,
+            302,
+            515
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "These condensed interim financial statements have been prepared on a going concern basis and under the historical cost convention, except for certain properties and financial instruments that are measured at revalued amounts or fair value, as described in the accounting policies. The financial statements are presented in Euro (€), which is the functional currency of the Company.",
+        "bbox": [
+            111,
+            515,
+            885,
+            582
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "For consolidation purposes, the financial statements of the Group’s UK subsidiary, which are prepared in Pound Sterling (GBP), have been translated into Euro. Income and expense items are translated at the average exchange rate for the period, while assets and liabilities are translated at the closing exchange rate at the reporting date. Exchange differences arising on translation are recognised in other comprehensive income and accumulated in equity.",
+        "bbox": [
+            111,
+            594,
+            885,
+            678
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "The financial reporting framework applied in the preparation of these interim financial statements is the Companies Act 2014 and FRS 102 – The Financial Reporting Standard applicable in the UK and Republic of Ireland, issued by the Financial Reporting Council.",
+        "bbox": [
+            111,
+            689,
+            885,
+            742
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "The Half Year results represent condensed interim financial statements and therefore do not include all of the information and disclosures required in the Group’s annual financial statements. They should be read in conjunction with the Group’s financial statements for the year ended 30 June 2025.",
+        "bbox": [
+            111,
+            753,
+            885,
+            820
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "The accounting policies applied in preparing these interim financial statements are consistent with those expected to be applied in the preparation of the Group’s financial statements for the year ending 30 June 2026.",
+        "bbox": [
+            111,
+            833,
+            885,
+            885
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Senus PLC is a public limited company incorporated and registered in Ireland with registered number is 605800.",
+        "bbox": [
+            111,
+            89,
+            883,
+            123
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "The registered office and the principal place of business of the company is:   \nBlock D   \nDaneswell Business Centre   \nMonksland   \nAthlone   \nCo. Roscommon   \nRepublic of Ireland",
+        "bbox": [
+            111,
+            136,
+            715,
+            252
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "2. Going Concern",
+        "text_level": 2,
+        "bbox": [
+            112,
+            265,
+            261,
+            281
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "The interim financial statements have been prepared on a going concern basis. The Directors, having made appropriate enquiries, consider that the Group has adequate resources to continue in operational existence for the foreseeable future. Accordingly, they continue to adopt the going concern basis in preparing the condensed group interim financial statements for the period ended 31 December 2025.",
+        "bbox": [
+            111,
+            281,
+            885,
+            363
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "3. Risks and Uncertainties",
+        "text_level": 2,
+        "bbox": [
+            112,
+            377,
+            328,
+            393
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "The Board continuously assesses and monitors the key risks of the business. The principal risks and uncertainties that could affect the Company’s medium-term performance have not materially changed from those disclosed in the Company’s Euronext Information Document published in December 2025 and available at www.senus.com/investors .",
+        "bbox": [
+            111,
+            393,
+            885,
+            459
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "4. Acquisition of Loamin",
+        "text_level": 2,
+        "bbox": [
+            112,
+            473,
+            312,
+            489
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Goodwill of €669,500 was recognised on the acquisition of Loamin Limited. No cash consideration was paid on completion of the transaction. However, contingent consideration of €850,000 has been recognised, representing the estimated fair value of potential future payments. This consideration is entirely performance-linked and is payable only if specified performance targets are achieved.",
+        "bbox": [
+            111,
+            489,
+            885,
+            571
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "5. Approval of Half Year Financial Statements",
+        "text_level": 2,
+        "bbox": [
+            112,
+            584,
+            485,
+            601
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "The Half Year financial statements were approved by the Board of Directors on 18 March 2026.",
+        "bbox": [
+            112,
+            601,
+            875,
+            618
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Notes to editors:",
+        "text_level": 2,
+        "bbox": [
+            112,
+            89,
+            261,
+            107
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Founded by Brendan Allen, Eoghan Finneran and Joe Desbonnet in 2017 and headquartered in Ireland, after 8 years of R&D and implementing projects with marquee clients, Senus is now seeking to establish itself as a leading global provider of Natural Capital management software and technology solutions for Governments, State agencies, financial institutions, corporations, farmers and other landowners. Natural Capital comprises the world's stock of natural resources including soil, air, water and habitats which underpin economies and society. Senus enables clients to optimise the use and preserve the value of their nature related assets.",
+        "bbox": [
+            111,
+            122,
+            885,
+            237
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Senus’ proprietary Natural Capital management software and technology solutions enable the ‘Measurement’, ‘Reporting,’ ‘Verification’ and ‘Planning’ of value chains associated with the use of natural resources in productive industry. Senus’ software and technology solutions are licenced directly to corporate and government clients, or through intermediaries such as agronomists or other consultants to end users. Senus transforms complex environmental data into actionable insights enabling clients to proactively manage their Natural Capital to unlock productivity gains and reduce environmental and operational risks.",
+        "bbox": [
+            111,
+            250,
+            885,
+            364
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Senus is currently providing its solutions to clients in Ireland, increasingly in the UK, and has an initial presence in mainland Europe. For the year ended 30 June 2025, Senus recorded revenue of €836,991, serving 138 customer accounts.",
+        "bbox": [
+            111,
+            377,
+            885,
+            428
+        ],
+        "page_idx": 8
+    }
+]
