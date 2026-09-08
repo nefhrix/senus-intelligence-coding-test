@@ -4,6 +4,16 @@ AI-native financial intelligence platform for analysing the historical performan
 
 The application extracts financial information from source documents, validates and stores it, calculates Board-level KPIs deterministically, and uses AI to generate financial commentary and answer questions about the business.
 
+## Assumptions
+
+- FY2024 and FY2025 are treated as comparable full financial years.
+- The 8 December 2025 balance sheet is treated as a point-in-time snapshot,
+  not as a financial period.
+- Financial calculations use only metrics that have passed validation.
+- Missing metrics are returned as unavailable rather than estimated.
+- The application is scoped to Senus PLC 
+- EUR is the reporting currency for financial metrics.
+
 ## Features
 
 - Board-level financial dashboard
@@ -188,13 +198,13 @@ FY2024 and FY2025 are treated as full financial years, while the December 2025 b
 
 Provides the ingestion workflow:
 
-```text
+
 Upload PDF
 → MinerU
 → Extraction
 → Validation
 → Financial Database
-```
+
 
 Validated extraction results are automatically promoted into the financial model.
 
@@ -204,7 +214,7 @@ Interactive financial intelligence assistant grounded in the same validated data
 
 Example questions:
 
-```text
+
 How has revenue changed?
 
 What are the biggest financial risks?
@@ -214,11 +224,11 @@ How is liquidity?
 Compare FY2024 and FY2025.
 
 What is our latest cash position?
-```
+
 
 ## Project Structure
 
-```text
+
 senus-board-intelligence/
 │
 ├── backend/
@@ -246,7 +256,7 @@ senus-board-intelligence/
 │   └── .env.example
 │
 └── README.md
-```
+
 
 ## Local Setup
 

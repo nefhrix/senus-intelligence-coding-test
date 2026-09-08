@@ -1,4 +1,5 @@
 from pathlib import Path
+from datetime import date
 from uuid import uuid4
 from app.core.config import settings
 from fastapi import (
@@ -10,7 +11,7 @@ from fastapi import (
     BackgroundTasks,
 )
 from sqlalchemy.orm import Session
-
+from sqlalchemy.dialects.sqlite import insert
 from app.db.session import get_db
 from app.models.company import Company
 from app.models.document import Document
@@ -58,6 +59,62 @@ def get_mineru_directory(
         / "mineru"
     )
 
+def create_reporting_period(
+    company_id: int,
+    code: str,
+) -> ReportingPeriod:
+    if code.startswith("FY"):
+        year = int(
+            code.replace("FY", "")
+        )
+
+        return ReportingPeriod(
+            company_id=company_id,
+            code=code,
+            label=f"FY {year}",
+            period_type="financial_year",
+            start_date=date(
+                year - 1,
+                7,
+                1,
+            ),
+            end_date=date(
+                year,
+                6,
+                30,
+            ),
+        )
+
+    if code.startswith("BS_"):
+        _, year, month, day = code.split(
+            "_"
+        )
+
+        snapshot_date = date(
+            int(year),
+            int(month),
+            int(day),
+        )
+
+        return ReportingPeriod(
+            company_id=company_id,
+            code=code,
+            label=(
+                f"{snapshot_date.day} "
+                f"{snapshot_date:%b %Y}"
+            ),
+            period_type="balance_sheet_snapshot",
+            start_date=None,
+            end_date=snapshot_date,
+        )
+
+    raise HTTPException(
+        status_code=422,
+        detail=(
+            "Unsupported reporting period code: "
+            f"{code}"
+        ),
+    )
 
 def find_content_list(
     document_id: int,
@@ -71,7 +128,6 @@ def find_content_list(
 
     patterns = [
         "*_content_list_v2.json",
-        "*_content_list.json",
     ]
 
     for pattern in patterns:
@@ -131,10 +187,15 @@ async def upload_document(
     )
 
     if company is None:
-        raise HTTPException(
-            status_code=404,
-            detail="Senus PLC was not found.",
+        company = Company(
+            name="Senus PLC",
+            ticker="SENUS",
+            currency="EUR",
         )
+
+        db.add(company)
+        db.commit()
+        db.refresh(company)
 
     original_name = (
         file.filename
@@ -374,29 +435,27 @@ def extract_document_metrics(
         )
         .all()
     )
-
+    
     period_map = {
         period.code: period
         for period in periods
     }
-
+    
     missing_periods = (
         period_codes
         - set(period_map.keys())
     )
-
-    if missing_periods:
-        raise HTTPException(
-            status_code=422,
-            detail=(
-                "Missing reporting periods: "
-                + ", ".join(
-                    sorted(
-                        missing_periods
-                    )
-                )
-            ),
+    
+    for code in sorted(missing_periods):
+        period = create_reporting_period(
+            company_id=document.company_id,
+            code=code,
         )
+    
+        db.add(period)
+        db.flush()
+    
+        period_map[code] = period
 
     try:
         db.query(
@@ -460,97 +519,45 @@ def extract_document_metrics(
                 period = period_map[
                     metric.period_label
                 ]
-
-                existing = (
-                    db.query(
-                        ReportedMetric
-                    )
-                    .filter(
-                        ReportedMetric.company_id
-                        == document.company_id,
-                        ReportedMetric.period_id
-                        == period.id,
-                        ReportedMetric.metric_code
-                        == metric.metric_code,
-                    )
-                    .first()
+        
+                stmt = insert(
+                    ReportedMetric
+                ).values(
+                    company_id=document.company_id,
+                    document_id=document.id,
+                    period_id=period.id,
+                    metric_code=metric.metric_code,
+                    value=metric.value,
+                    currency=metric.currency,
+                    unit=metric.unit,
+                    statement_type=metric.statement_type,
+                    source_page=metric.source_page,
+                    source_text=metric.source_text,
+                    confidence=metric.confidence,
+                    validation_status="validated",
                 )
-
-                if existing is not None:
-                    existing.document_id = (
-                        document.id
-                    )
-                    existing.value = (
-                        metric.value
-                    )
-                    existing.currency = (
-                        metric.currency
-                    )
-                    existing.unit = (
-                        metric.unit
-                    )
-                    existing.statement_type = (
-                        metric.statement_type
-                    )
-                    existing.source_page = (
-                        metric.source_page
-                    )
-                    existing.source_text = (
-                        metric.source_text
-                    )
-                    existing.confidence = (
-                        metric.confidence
-                    )
-                    existing.validation_status = (
-                        "validated"
-                    )
-
-                else:
-                    reported_metric = (
-                        ReportedMetric(
-                            company_id=(
-                                document.company_id
-                            ),
-                            document_id=(
-                                document.id
-                            ),
-                            period_id=(
-                                period.id
-                            ),
-                            metric_code=(
-                                metric.metric_code
-                            ),
-                            value=(
-                                metric.value
-                            ),
-                            currency=(
-                                metric.currency
-                            ),
-                            unit=(
-                                metric.unit
-                            ),
-                            statement_type=(
-                                metric.statement_type
-                            ),
-                            source_page=(
-                                metric.source_page
-                            ),
-                            source_text=(
-                                metric.source_text
-                            ),
-                            confidence=(
-                                metric.confidence
-                            ),
-                            validation_status=(
-                                "validated"
-                            ),
-                        )
-                    )
-
-                    db.add(
-                        reported_metric
-                    )
-
+        
+                stmt = stmt.on_conflict_do_update(
+                    index_elements=[
+                        "company_id",
+                        "period_id",
+                        "metric_code",
+                    ],
+                    set_={
+                        "document_id": document.id,
+                        "value": metric.value,
+                        "currency": metric.currency,
+                        "unit": metric.unit,
+                        "statement_type": metric.statement_type,
+                        "source_page": metric.source_page,
+                        "source_text": metric.source_text,
+                        "confidence": metric.confidence,
+                        "validation_status": "validated",
+                    },
+                )
+        
+                db.execute(stmt)
+        
             promoted = True
 
         db.commit()

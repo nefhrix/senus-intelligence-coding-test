@@ -81,7 +81,16 @@ def get_title_text(
 
     return spans_to_text(title_content)
 
+def get_paragraph_text(block: dict) -> str:
+    content = block.get("content", {})
 
+    parts = []
+
+    for item in content.get("paragraph_content", []):
+        if item.get("type") == "text":
+            parts.append(item.get("content", ""))
+
+    return " ".join(parts).strip()
 def get_table_caption(
     block: dict,
 ) -> str:
@@ -164,11 +173,17 @@ def parse_financial_sections(
             block_type = block.get("type")
 
             if block_type == "title":
-                current_title = get_title_text(
-                    block
-                )
+                current_title = get_title_text(block)
                 continue
-
+            
+            if block_type == "paragraph":
+                paragraph = get_paragraph_text(block)
+            
+                if classify_statement(paragraph):
+                    current_title = paragraph
+            
+                continue
+            
             if block_type != "table":
                 continue
 
@@ -199,7 +214,11 @@ def parse_financial_sections(
                     label
                 )
             )
-
+            print("=" * 50)
+            print("Current title:", current_title)
+            print("Caption:", caption)
+            print("Label:", label)
+            print("Statement:", classify_statement(label))
             if statement_type is None:
                 continue
 

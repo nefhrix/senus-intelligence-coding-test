@@ -8,6 +8,7 @@ from sqlalchemy import (
     String,
     Text,
     func,
+    UniqueConstraint,
 )
 from sqlalchemy.orm import Mapped, mapped_column
 
@@ -16,6 +17,14 @@ from app.db.base import Base
 
 class ReportedMetric(Base):
     __tablename__ = "reported_metrics"
+    __table_args__ = (
+        UniqueConstraint(
+            "company_id",
+            "period_id",
+            "metric_code",
+            name="uq_reported_metric_company_period_metric",
+        ),
+    )
 
     id: Mapped[int] = mapped_column(
         primary_key=True,

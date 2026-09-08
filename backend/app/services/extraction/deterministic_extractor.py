@@ -1020,68 +1020,73 @@ def extract_equity_statement(
 def extract_deterministic_metrics(
     section: FinancialSection,
 ) -> ExtractionResult:
-    normalized_title = (
-        normalize_text(
+
+        normalized_title = normalize_text(
             section.title
         )
-    )
 
-    is_december_snapshot = (
-        "balance sheet"
-        in normalized_title
-        and "08 december 2025"
-        in normalized_title
-    )
+        is_december_snapshot = (
+            "balance sheet" in normalized_title
+            and "08 december 2025" in normalized_title
+        )
 
-    if is_december_snapshot:
-        return (
-            extract_balance_sheet_snapshot(
+        if is_december_snapshot:
+            return extract_balance_sheet_snapshot(
                 section
             )
+
+        if (
+            "08 december 2025" in normalized_title
+            and section.statement_type
+            == "equity_statement"
+        ):
+            return ExtractionResult(
+                metrics=[]
+            )
+
+        rows = parse_table_rows(
+            section.html
         )
 
-    if (
-        "08 december 2025"
-        in normalized_title
-        and section.statement_type
-        == "equity_statement"
-    ):
+        if (
+            section.statement_type
+            == "income_statement"
+        ):
+            metrics = extract_income_statement(
+                section,
+                rows,
+            )
+
+        elif (
+            section.statement_type
+            == "balance_sheet"
+        ):
+            metrics = extract_balance_sheet(
+                section,
+                rows,
+            )
+
+        elif (
+            section.statement_type
+            == "cash_flow"
+        ):
+            metrics = extract_cash_flow(
+                section,
+                rows,
+            )
+
+        elif (
+            section.statement_type
+            == "equity_statement"
+        ):
+            metrics = extract_equity_statement(
+                section,
+                rows,
+            )
+
+        else:
+            metrics = []
+
         return ExtractionResult(
-            metrics=[]
+            metrics=metrics
         )
-
-    if (
-        section.statement_type
-        == "income_statement"
-    ):
-        return extract_income_statement(
-            section
-        )
-
-    if (
-        section.statement_type
-        == "balance_sheet"
-    ):
-        return extract_balance_sheet(
-            section
-        )
-
-    if (
-        section.statement_type
-        == "cash_flow"
-    ):
-        return extract_cash_flow(
-            section
-        )
-
-    if (
-        section.statement_type
-        == "equity_statement"
-    ):
-        return extract_equity_statement(
-            section
-        )
-
-    return ExtractionResult(
-        metrics=[]
-    )

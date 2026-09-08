@@ -8,7 +8,7 @@ import httpx
 
 def check_mineru_health() -> dict:
     response = httpx.get(
-        f"{settings.settings.mineru_api_url}/health",
+        f"{settings.mineru_api_url}/health",
         timeout=10,
     )
 
