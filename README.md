@@ -166,7 +166,7 @@ Core entities:
 - `ExtractionCandidate`
 - `ReportedMetric`
 
-The distinction between `ExtractionCandidate` and `ReportedMetric` creates a trust boundary between raw extraction and validated financial data.
+The distinction between `ExtractionCandidate` and `ReportedMetric` creates a boundary between raw extraction and validated financial data.
 
 Reported metrics retain source-document and source-page information for traceability.
 
@@ -317,6 +317,39 @@ CORS_ORIGINS=http://localhost:5173
 ```env
 VITE_API_URL=http://127.0.0.1:8000
 ```
+
+
+## Prerequisites
+
+- Python 3.12+
+- Node.js 20+
+- Ollama installed
+- Qwen3:8B downloaded (`ollama pull qwen3:8b`)
+- MinerU installed and available via `mineru-api`
+
+
+# Running the application
+
+Start each component in a separate terminal.
+
+### Terminal 1 — MinerU
+
+mineru-api --host 127.0.0.1 --port 8001
+
+### Terminal 2 — Backend
+
+cd backend
+uvicorn app.main:app --reload
+
+### Terminal 3 — Frontend
+
+cd frontend
+npm run dev
+
+### Terminal 4 — Ollama
+
+ollama serve
+
 
 ## Tests
 
