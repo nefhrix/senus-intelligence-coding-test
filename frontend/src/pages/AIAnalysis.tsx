@@ -7,12 +7,18 @@ import {
 
 import { useMutation } from "@tanstack/react-query";
 
-import { generateBoardInsights } from "../api/ai";
+import {
+  generateBoardInsights,
+  type BoardInsightsDataQuality,
+  type BoardInsightsSource,
+} from "../api/ai";
 
 type Message = {
   id: string;
   role: "user" | "assistant";
   content: string;
+  sources?: BoardInsightsSource[];
+  dataQuality?: BoardInsightsDataQuality;
 };
 
 const prompts = [
@@ -51,6 +57,8 @@ export default function AIAnalysis() {
               id: crypto.randomUUID(),
               role: "assistant",
               content: data.insights,
+              sources: data.sources,
+              dataQuality: data.data_quality,
             },
           ],
         );
@@ -116,8 +124,9 @@ export default function AIAnalysis() {
             Board Intelligence
           </span>
 
-          <span className="font-mono text-[10px] uppercase tracking-wider text-zinc-400">
-            Validated Financial Data
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-200 bg-amber-50 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-amber-700">
+            <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
+            AI-generated commentary — not audited
           </span>
         </div>
 
@@ -282,13 +291,94 @@ function Message({
             {message.content}
           </p>
         ) : (
-          <AssistantResponse
-            text={
-              message.content
-            }
-          />
+          <>
+            <AssistantResponse
+              text={
+                message.content
+              }
+            />
+
+            <DataQualityNotes
+              dataQuality={
+                message.dataQuality
+              }
+            />
+
+            <SourceList
+              sources={
+                message.sources
+              }
+            />
+          </>
         )}
       </div>
+    </div>
+  );
+}
+
+function DataQualityNotes({
+  dataQuality,
+}: {
+  dataQuality?: Message["dataQuality"];
+}) {
+  if (!dataQuality) {
+    return null;
+  }
+
+  const warnings: string[] = [];
+
+
+  if (
+    dataQuality.unvalidated_pending_documents.length > 0
+  ) {
+    warnings.push(
+      `More recent documents (${dataQuality.unvalidated_pending_documents
+        .map((doc) => doc.name)
+        .join(", ")}) have been uploaded but have not yet passed validation, so they are not reflected here.`,
+    );
+  }
+
+  if (warnings.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className="mt-3 space-y-2">
+      {warnings.map((warning, index) => (
+        <div
+          key={index}
+          className="rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-xs leading-5 text-amber-800"
+        >
+          {warning}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function SourceList({
+  sources,
+}: {
+  sources?: Message["sources"];
+}) {
+  if (!sources || sources.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className="mt-3 flex flex-wrap gap-2">
+      {sources.map((source) => (
+        <span
+          key={`${source.period_code}-${source.metric_code}`}
+          className="inline-flex items-center gap-1 rounded-full border border-zinc-200 bg-zinc-50 px-2.5 py-1 font-mono text-[10px] text-zinc-500"
+          title={`${source.document_name}${source.source_page ? `, page ${source.source_page}` : ""}`}
+        >
+          {source.metric_code} · {source.period_code}
+          {source.source_page
+            ? ` · p.${source.source_page}`
+            : ""}
+        </span>
+      ))}
     </div>
   );
 }

@@ -71,17 +71,19 @@ export default function Financials() {
     )
     || annualMetricResults.some(
       (result) => result.isLoading,
-    )
-    || snapshotResult.isLoading;
+    );
 
+  // The FY2024/FY2025 data above is required for this page.
+  // The balance-sheet snapshot is supplementary — if it hasn't
+  // been uploaded/validated yet, that should only affect the
+  // snapshot column, not block the whole page from rendering.
   const isError =
     dashboardResults.some(
       (result) => result.isError,
     )
     || annualMetricResults.some(
       (result) => result.isError,
-    )
-    || snapshotResult.isError;
+    );
 
   if (isLoading) {
     return (

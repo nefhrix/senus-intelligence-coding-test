@@ -1,9 +1,65 @@
 import json
-import os
+import re
 
 from ollama import Client
 
 from app.core.config import settings
+
+NUMBER_IN_TEXT = re.compile(
+    r"-?\d[\d,]*(?:\.\d+)?"
+)
+
+def match_cited_sources(
+    response_text: str,
+    metric_lookup: list[dict],
+    tolerance: float = 0.5,
+) -> list[dict]:
+    """
+    Given the model's response text and a flat list of metric entries,
+    return the subset whose values are actually referenced in the response.
+    """
+
+    cited: list[dict] = []
+    seen: set[tuple] = set()
+
+    for match in NUMBER_IN_TEXT.finditer(response_text):
+        token = match.group().replace(",", "")
+
+        try:
+            number = float(token)
+        except ValueError:
+            continue
+
+        # Ignore years such as 2024, 2025 etc.
+        if 1900 <= abs(number) <= 2100:
+            continue
+
+        # Ignore tiny values
+        if abs(number) < 1:
+            continue
+
+        for entry in metric_lookup:
+            value = entry.get("value")
+
+            if value is None:
+                continue
+
+            # Compare absolute values so -590256 matches 590256
+            if abs(abs(number) - abs(value)) > tolerance:
+                continue
+
+            key = (
+                entry["period_code"],
+                entry["metric_code"],
+            )
+
+            if key in seen:
+                continue
+
+            seen.add(key)
+            cited.append(entry)
+
+    return cited
 
 
 
@@ -34,6 +90,27 @@ Rules:
 13. Use bullet points when listing risks, priorities, or comparisons.
 14. Do not mention being an AI model.
 15. If the supplied data cannot answer the question, say that clearly.
+16. Base every financial statement, recommendation and conclusion only on
+the supplied reported_metrics and derived_metrics.
+
+Do not calculate new financial figures.
+
+When quoting a number, reproduce it exactly as provided.
+
+If there is insufficient information to answer confidently, state that
+clearly.
+17. If "as_of_date" is provided and the most recent financial data is
+    more than a few months older than that date, note that the data may
+    be out of date before drawing conclusions from it.
+18. If "unvalidated_pending_documents" is non-empty, mention that more
+    recent financial information may exist but has not yet passed
+    validation, and is therefore not reflected in this answer.
+    19. When the user asks for a recommendation or decision
+(e.g. raise funding, hire staff, cut costs),
+provide a clear recommendation first,
+then justify it using only the supplied financial data.
+Avoid generic "it depends" answers unless the data genuinely
+cannot support a recommendation.
 """
 
 

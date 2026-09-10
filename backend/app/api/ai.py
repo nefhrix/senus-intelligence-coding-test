@@ -1,13 +1,20 @@
+from datetime import date
+
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
 from app.db.session import get_db
+from app.models.document import Document
+from app.models.extraction_candidate import (
+    ExtractionCandidate,
+)
 from app.models.reporting_period import ReportingPeriod
 from app.models.reported_metric import ReportedMetric
 
 from app.services.ai.board_insights import (
     generate_board_insights,
+    match_cited_sources,
 )
 
 from app.services.financials.calculations import (
@@ -51,6 +58,74 @@ def load_metrics(
         row.metric_code: row.value
         for row in rows
     }
+
+
+def load_metrics_with_sources(
+    db: Session,
+    period_id: int,
+    period_code: str,
+) -> tuple[dict[str, float], list[dict]]:
+
+
+    rows = (
+        db.query(ReportedMetric, Document)
+        .join(
+            Document,
+            ReportedMetric.document_id == Document.id,
+        )
+        .filter(
+            ReportedMetric.period_id == period_id
+        )
+        .all()
+    )
+
+    values = {
+        metric.metric_code: metric.value
+        for metric, _ in rows
+    }
+
+    lookup = [
+        {
+            "period_code": period_code,
+            "metric_code": metric.metric_code,
+            "value": metric.value,
+            "source_page": metric.source_page,
+            "document_id": metric.document_id,
+            "document_name": document.name,
+        }
+        for metric, document in rows
+    ]
+
+    return values, lookup
+
+
+def find_unvalidated_pending_documents(
+    db: Session,
+) -> list[dict]:
+
+
+    rows = (
+        db.query(Document)
+        .join(
+            ExtractionCandidate,
+            ExtractionCandidate.document_id == Document.id,
+        )
+        .filter(
+            ExtractionCandidate.validation_status
+            == "needs_review"
+        )
+        .distinct()
+        .all()
+    )
+
+    return [
+        {
+            "document_id": document.id,
+            "name": document.name,
+            "uploaded_at": str(document.created_at),
+        }
+        for document in rows
+    ]
 
 
 def get_period(
@@ -165,22 +240,41 @@ def create_board_insights(
         "BS_2025_12_08",
     )
 
-    fy2024_metrics = load_metrics(
-        db,
-        fy2024.id,
+    fy2024_metrics, fy2024_sources = (
+        load_metrics_with_sources(
+            db, fy2024.id, "FY2024"
+        )
     )
 
-    fy2025_metrics = load_metrics(
-        db,
-        fy2025.id,
+    fy2025_metrics, fy2025_sources = (
+        load_metrics_with_sources(
+            db, fy2025.id, "FY2025"
+        )
     )
 
-    snapshot_metrics = load_metrics(
-        db,
-        snapshot.id,
+    snapshot_metrics, snapshot_sources = (
+        load_metrics_with_sources(
+            db, snapshot.id, snapshot.code
+        )
+    )
+
+    metric_lookup = (
+        fy2024_sources
+        + fy2025_sources
+        + snapshot_sources
+    )
+
+    unvalidated_pending_documents = (
+        find_unvalidated_pending_documents(db)
     )
 
     financial_context = {
+        "as_of_date": str(date.today()),
+
+        "unvalidated_pending_documents": (
+            unvalidated_pending_documents
+        ),
+
         "company": {
             "name": "Senus",
             "currency": "EUR",
@@ -282,6 +376,21 @@ def create_board_insights(
             ),
         ) from exc
 
+    sources = match_cited_sources(
+        insights,
+        metric_lookup,
+    )
+
+
     return {
         "insights": insights,
+        "sources": sources,
+        "data_quality": {
+            "as_of_date": (
+                financial_context["as_of_date"]
+            ),
+            "unvalidated_pending_documents": (
+                unvalidated_pending_documents
+            ),
+        },
     }
